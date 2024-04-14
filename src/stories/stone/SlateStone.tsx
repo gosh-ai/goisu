@@ -1,5 +1,6 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { drawLightReflexion } from "./stoneUtils";
+import { useCanvasAndContext } from "../utils";
 
 interface SlateStoneProps {
   size: number;
@@ -12,19 +13,7 @@ export const SlateStone = ({
   radius,
   simple = true,
 }: SlateStoneProps) => {
-  const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const [context, setContext] = useState<CanvasRenderingContext2D | null>(null);
-
-  useEffect(() => {
-    if (canvasRef.current) {
-      const renderContext = canvasRef.current.getContext("2d");
-      if (!renderContext) {
-        console.error("Failed to get 2D rendering context.");
-        return;
-      }
-      setContext(renderContext);
-    }
-  }, [canvasRef]);
+  const { canvasRef, context } = useCanvasAndContext();
 
   useEffect(() => {
     if (context) {
