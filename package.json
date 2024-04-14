@@ -1,0 +1,55 @@
+{
+  "name": "@gosh-ai/goisu",
+  "version": "0.1.0",
+  "description": "Perfect and Beautiful Go Board React Component Library",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gosh-ai/goisu.git"
+  },
+  "author": "ReiRev <reirev2913@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "format": "prettier --write --parser typescript '**/*.{ts,tsx}'",
+    "lint": "eslint . --ext .ts,.tsx --ignore-path .gitignore --fix",
+    "storybook": "storybook dev -p 6007",
+    "storybook:build": "storybook build",
+    "watch:format": "onchange '**/*.{ts,tsx}' -- npm run format"
+  },
+  "watch": {
+    "source": "src",
+    "test": "src"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.2.25",
+    "@storybook/addon-console": "^3.0.0",
+    "@storybook/addon-essentials": "^8.0.5",
+    "@storybook/addon-interactions": "^8.0.5",
+    "@storybook/addon-links": "^8.0.5",
+    "@storybook/addon-onboarding": "^8.0.5",
+    "@storybook/blocks": "^8.0.5",
+    "@storybook/react": "^8.0.5",
+    "@storybook/react-vite": "^8.0.5",
+    "@storybook/test": "^8.0.5",
+    "@types/react": "^18.2.73",
+    "@typescript-eslint/eslint-plugin": "^7.4.0",
+    "@typescript-eslint/parser": "^7.4.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-storybook": "^0.8.0",
+    "onchange": "^7.1.0",
+    "prettier": "^3.2.5",
+    "react": "^18.2.0",
+    "storybook": "^8.0.5",
+    "typescript": "^5.4.3"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "gobo": "^0.7.0"
+  }
+}
